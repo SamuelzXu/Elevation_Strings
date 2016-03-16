@@ -1,0 +1,1 @@
+angular.module('elevEmails',['emailController','emailService'])
