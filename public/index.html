@@ -217,7 +217,7 @@
                 </div>
                 <h3 class="wow fadeInDown delay-06s">Danh Phan</h3>
                 <span class="wow fadeInDown delay-06s">2nd Violin | Customer Relations</span>
-                <p class="wow fadeInDown delay-06s">Along with being an amazing violinist, Danh is in charge of receiving and replying to all emails and text messages.</p>
+                <p class="wow fadeInDown delay-06s">Grade 10 student at Assumption College Secondary School, part of the International Baclaureate Programe</p>
             </div>
             <div class="team-leader-box">
                 <div class="team-leader wow fadeInDown delay-09s"> 
@@ -232,7 +232,7 @@
                 </div>
                 <h3 class="wow fadeInDown delay-09s">Gabriel Bycznski</h3>
                 <span class="wow fadeInDown delay-09s">Viola | Logistics</span>
-                <p class="wow fadeInDown delay-09s">When he's not practicing viola, Gabriel is hard at work studying for school. With a knack for number crunching, he handles all our financial calculations. </p>
+                <p class="wow fadeInDown delay-09s">Grade 11 student at St. Anne Highschool, part of the Advanced Placement Program. </p>
             </div>
             <div class="team-leader-box">
                 <div class="team-leader wow fadeInDown delay-09s"> 
@@ -247,7 +247,7 @@
                 </div>
                 <h3 class="wow fadeInDown delay-09s">Felix Nunes</h3>
                 <span class="wow fadeInDown delay-09s">Cello | Event Organizer</span>
-                <p class="wow fadeInDown delay-09s">Along with being an aspiring cellist, Felix is extremely organized, specifically why we assigned him to schedule and plan ahead all our events and venues.</p>
+                <p class="wow fadeInDown delay-09s">Grade 9 student at L'Essor Secondary School, part of the International Baclaureate Programme</p>
             </div>
             <div class="team-leader-box">
             </div>
@@ -264,7 +264,7 @@
                 </div>
                 <h3 class="wow fadeInDown delay-03s">Samuel Xu</h3>
                 <span class="wow fadeInDown delay-03s">1st Violin | Founder | General Manager</span>
-                <p class="wow fadeInDown delay-03s">Both the gift of music and his passion of sharing that music with others had lead Samuel to found this string quartet, and has since provided beautiful music to people all over Windsor Essex-County.</p>
+                <p class="wow fadeInDown delay-03s">Grade 11 student at Vincent Massey Secondary School, part of the Advanced Placement Program</p>
             </div>
         </div>
     </div>
@@ -305,7 +305,7 @@
                     <li class="gplus"><a href="#"><i class="fa-google-plus"></i></a></li>
                     <li class="dribbble"><a href="#"><i class="fa-dribbble"></i></a></li>
                 </ul>
-            </div>
+           <!--  </div>
         	<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
             	<form id="contact">
                 	<input class="input-text" id="name"type="text" name="" value="Your Name *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
@@ -314,13 +314,13 @@
                     <button class="input-btn" type="submit">send message</button> 
                 </form>	
             </div>
-        </div>
+        </div> -->
 </section>
 </div>
 <footer class="footer">
     <div class="container">
         <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
-        <span class="copyright">Copyright © 2015 Elevation Strings| <a href="http://arcrum.com/">Arcrum Web Design</a> by Samuel Xu</span>
+        <span class="copyright">Copyright © 2016 Elevation Strings| <a href="http://arcrum.com/">Arcrum Web Design</a> by Samuel Xu</span>
     </div>
 </footer>
 
@@ -334,6 +334,7 @@
                 message: $("#text").val()
             }
             $.post("/contact", bookDetails, function(res)
+                console.log("posted");
                 $('#contact')[0].reset();
                 alert(res.message);
             });

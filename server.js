@@ -48,4 +48,4 @@ app.post("/js/contact", function(req,res) {
 //mongoose.connect('mongodb://localhost/myapp');
 
 app.listen(port);
-console.log("App listening on port" + port);
+console.log("App listening on port " + port);
