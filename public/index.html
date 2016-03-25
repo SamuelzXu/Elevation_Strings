@@ -1,8 +1,6 @@
 <!doctype html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/core.js"></script>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
@@ -309,12 +307,12 @@
                 </ul>
             </div>
         	<div class="col-lg-6 col-sm-5 wow fadeInUp delay-05s">
-            	<div class="form">
+            	<form id="contact">
                 	<input class="input-text" id="name"type="text" name="" value="Your Name *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
                     <input class="input-text" id="email" type="text" name="" value="Your E-mail *" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">
                 	<textarea class="input-text text-area" id="text" cols="0" rows="0" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-                    <input class="input-btn" type="submit" value="send message">
-                </div>	
+                    <button class="input-btn" type="submit">send message</button> 
+                </form>	
             </div>
         </div>
 </section>
@@ -322,9 +320,26 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
-        <span class="copyright">Copyright © 2015 | <a href="http://arcrum.com/">Arcrum Web Design</a> by Samuel Xu</span>
+        <span class="copyright">Copyright © 2015 Elevation Strings| <a href="http://arcrum.com/">Arcrum Web Design</a> by Samuel Xu</span>
     </div>
 </footer>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $("#contact").submit(function () {
+            var bookDetails = {
+                fullName : $("#name").val(),
+                email : $("email").val(),
+                message: $("#text").val()
+            }
+            $.post("/contact", bookDetails, function(res)
+                $('#contact')[0].reset();
+                alert(res.message);
+            });
+            return false;
+        });
+    });
 
 <script type="text/javascript">
     $(document).ready(function(e) {
